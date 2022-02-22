@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/thecodo3/public_html/
+    - /bin/cp -R brands $DEPLOYPATH
+    - /bin/cp -R includes $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp -R pages $DEPLOYPATH
+    - /bin/cp -R favicon.ico $DEPLOYPATH
+    - /bin/cp -R default.php $DEPLOYPATH

@@ -1,0 +1,23 @@
+-#screenshotsaturday on twitter.
+-follow other programming and gamedev twitter accounts.
+-add link to stackoverflow account and start replying to people.
+-same on reddit. add link to bio and engage with other pages.
+-youtube account. post video recordings of each of the algorithms with a link to the tutorial page.
+
+-cookie clicker style idle clicker.
+-focused on growing a space colony.
+-instead of cookies, population.
+
+-for the tip explaining the language, have a database column for language within each article. then have a table mapping language to tip.
+
+-automatically generate nade pages without a markddown file.
+-in the database, have a column for number of images. then loop, loading figureX... images.
+-have a description for each page in the database.
+-the tags and description will say if a jump throw is required.
+
+-split TheCodingDodo project.
+-DodoWeb engine has all the core engine files.
+-Have a TheCodingDodo and TheCounterStrikeDodo project.
+-These will be inside the contents folder, as seperate git repos.
+-pages, sides, menus, foots, scss files will all be in this folder.
+-the main.css will also be in there. Each subproject will have a main.scss that imports the generic main.scss that has all the default styles.

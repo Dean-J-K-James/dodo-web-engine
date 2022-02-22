@@ -1,0 +1,657 @@
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fdf6e3;
+  color: #657b83; }
+
+.hljs-comment,
+.hljs-quote {
+  color: #93a1a1; }
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900; }
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198; }
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2; }
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900; }
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16; }
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f; }
+
+.hljs-formula {
+  background: #eee8d5; }
+
+.hljs-emphasis {
+  font-style: italic; }
+
+.hljs-strong {
+  font-weight: bold; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+.album {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px; }
+
+.photo {
+  width: 256px; }
+
+.photo-card {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 01fr 01fr;
+  grid-template-areas: "image description"; }
+
+.photo-card .image {
+  grid-template-columns: 01fr;
+  grid-template-areas: "image"; }
+
+.photo-card .description {
+  grid-template-columns: 01fr;
+  grid-template-areas: "description";
+  display: flex;
+  flex-direction: column;
+  gap: 16px; }
+
+.cell.about-me {
+  background: #f6f6f6; }
+
+.cell.photo-description-side {
+  background: #f6f6f6; }
+
+.cell.photo-description {
+  background: #f6f6f6; }
+
+.cell.triple-selection h1,
+.cell.triple-selection p {
+  text-align: center; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+* {
+  margin: 00px;
+  padding: 00px; }
+
+html {
+  height: 100%; }
+
+body {
+  background: #fb0101;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 01fr;
+  grid-template-rows: min-content min-content 01fr min-content;
+  align-items: self-start;
+  min-height: 100%;
+  grid-template-areas: "cook" "menu" "body" "foot"; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+a {
+  border-radius: 02px;
+  color: #fb0101;
+  text-decoration: none;
+  padding: 00px 00px; }
+
+a:hover {
+  color: #fb0101; }
+
+tip {
+  background-color: #fb0101;
+  border: 1px solid #fb0101;
+  border-radius: 02px;
+  color: #fb0101;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 08px; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+#page.one-column {
+  grid-template-columns: 01fr;
+  grid-template-areas: "page";
+  margin: 32px 020% 32px 020%; }
+
+#page.two-column {
+  grid-template-columns: 01fr 256px;
+  grid-template-areas: "page side";
+  margin: 32px 020% 32px 020%; }
+
+.cell.stretch {
+  border-radius: 00px;
+  padding: 16px 16px; }
+
+.cell.stretch-padded {
+  border-radius: 00px;
+  padding: 32px 020%; }
+
+.cell.no-stretch {
+  border-radius: 00px;
+  margin: 32px 020%; }
+
+@media screen and (max-width: 1024px) {
+  #page.two-column {
+    margin: 16px; } }
+@media screen and (max-width: 640px) {
+  #page.two-column {
+    grid-template-columns: 01fr;
+    grid-template-areas: "page" "side"; } }
+@media screen and (max-width: 1024px) {
+  .cell.stretch-padded {
+    padding: 16px 16px; }
+
+  .cell.no-stretch {
+    margin: 16px 16px; } }
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+#application-container {
+  background: #fb0101;
+  border-radius: 02px;
+  width: 100%;
+  cursor: crosshair !important;
+  margin: 00px 00px 00px 00px; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+.article-card {
+  border-radius: 02px;
+  position: relative;
+  flex: 1;
+  min-width: 40%;
+  display: grid;
+  grid-template-columns: 128px 001fr;
+  grid-template-areas: "thmb desc"; }
+
+.article-card:hover {
+  background-color: #fb0101; }
+
+.article-card img {
+  height: 128px;
+  width: 128px;
+  grid-area: thmb; }
+
+.article-card a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 000%;
+  left: 000%;
+  bottom: 000%;
+  right: 000%; }
+
+.article-details {
+  display: flex;
+  flex-direction: column;
+  grid-area: desc;
+  gap: 04px;
+  padding: 08px 16px; }
+
+@media screen and (max-width: 640px) {
+  .article-card {
+    grid-template-columns: 000px 001fr;
+    grid-template-areas: "thmb desc"; } }
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+#foot {
+  background-color: #fb0101;
+  border-top: 1px solid #fb0101;
+  position: relative;
+  right: 00px;
+  left: 00px;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  padding: 32px 32px;
+  grid-area: foot; }
+
+#foot .fa,
+#foot .fas {
+  border-radius: 050%;
+  color: white;
+  width: 14px;
+  height: 14px;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  padding: 08px; }
+
+.fa-twitter {
+  background-color: #1da1f2; }
+
+.fa-youtube {
+  background-color: #bb0000; }
+
+.fa-envelope {
+  background-color: #d93025; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+form,
+#ajax_target {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; }
+
+form.form-h {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 16px; }
+
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1 1 auto;
+  gap: 08px;
+  margin: 00px;
+  padding: 00px; }
+
+.form-group.form-group-button {
+  flex: 0; }
+
+.form-group label,
+table th {
+  color: #515151;
+  font-size: 13px;
+  font-weight: bold; }
+
+.form-group .message {
+  color: #515151;
+  font-size: 13px;
+  font-weight: normal; }
+
+hr {
+  border: none;
+  border-bottom: 1px solid #fb0101; }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: #f6f6f6;
+  border: 1px solid #fb0101;
+  color: #333333;
+  font-size: 13px;
+  padding: 04px; }
+
+.form-group textarea {
+  resize: none; }
+
+.form-group button {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 04px 16px;
+  min-width: 0px; }
+
+.form-group button.search {
+  background-color: #dde7fb;
+  border: 1px solid #609cec;
+  color: #609cec; }
+
+.form-group button.new {
+  background-color: #dde7fb;
+  border: 1px solid #609cec;
+  color: #609cec; }
+
+.form-group button.save {
+  background-color: #b5ffb5;
+  border: 1px solid #337533;
+  color: #337533; }
+
+.form-group button.delete {
+  background-color: #ffc9c9;
+  border: 1px solid #dd3333;
+  color: #dd3333; }
+
+.form-group .note {
+  border-left: 4px solid #fb0101;
+  color: #515151;
+  font-size: 13px;
+  font-weight: normal;
+  padding-left: 08px; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+pre {
+  padding: 00px;
+  white-space: pre-wrap; }
+
+code,
+code.hljs {
+  border-radius: 02px;
+  font-family: Consolas, monaco, monospace;
+  font-size: 14px;
+  font-weight: normal; }
+
+code {
+  background-color: #fb0101;
+  color: #fb0101;
+  padding: 02px 04px; }
+
+code.hljs {
+  background-color: #fb0101;
+  padding: 00px; }
+
+#page .hljs-ln-numbers {
+  background-color: #fb0101;
+  padding: 00px 04px 00px 08px; }
+
+#page .hljs-ln-code {
+  width: 100%;
+  padding: 00px 08px 00px 08px; }
+
+#page .hljs tr:first-child .hljs-ln-line {
+  padding-top: 08px; }
+
+#page .hljs tr:last-child .hljs-ln-line {
+  padding-bottom: 08px; }
+
+#page .hljs-ln-n:after {
+  content: "."; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+img {
+  border-radius: 02px;
+  max-width: 100%;
+  overflow: hidden; }
+
+.cell-page img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+#menu,
+#cook {
+  position: relative;
+  height: 34px;
+  left: 00px;
+  right: 00px;
+  display: flex;
+  flex-direction: row;
+  gap: 08px;
+  padding: 08px 020%; }
+
+#menu {
+  background-color: #fb0101;
+  grid-area: menu; }
+
+#cook {
+  background-color: #fb0101;
+  grid-area: cook; }
+
+#cook p {
+  color: #fb0101;
+  margin: 00px;
+  margin-top: auto;
+  margin-bottom: auto; }
+
+#menu *,
+#cook * {
+  border: none;
+  border-radius: 02px;
+  text-align: left; }
+
+#menu a,
+#cook a {
+  background-color: transparent;
+  width: auto;
+  height: 34px;
+  padding: 00px 08px;
+  color: #fb0101;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 34px;
+  cursor: pointer;
+  white-space: nowrap; }
+
+#menu a.active,
+#menu a:hover,
+#cook a:hover {
+  background-color: #fb0101;
+  color: #fb0101; }
+
+.divider {
+  flex-grow: 1; }
+
+#menu a.logo {
+  background-color: #fb0101;
+  color: #fb0101;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 02px;
+  line-height: 34px;
+  font-weight: bold;
+  padding: 00px 08px;
+  font-size: 16px;
+  cursor: pointer; }
+
+#menu a.logo:hover {
+  background-color: #fb0101;
+  color: #fb0101; }
+
+#menu a.logo img {
+  height: 100%;
+  width: 100%; }
+
+@media screen and (max-width: 1024px) {
+  #menu,
+  #cook {
+    padding: 08px 16px; } }
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+.money {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 00px;
+  padding: 00px;
+  display: none; }
+
+.money img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 00px;
+  padding: 00px; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+#page {
+  display: grid;
+  grid-area: body;
+  grid-gap: 16px; }
+
+.cell {
+  background: #fb0101;
+  border: 1px solid #fb0101;
+  border-radius: 04px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px; }
+
+.cell-page, .cell-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; }
+
+.cell-page {
+  grid-area: page; }
+
+.cell-side {
+  grid-area: side; }
+
+.cell-page .cell {
+  gap: 16px; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+.cell-side a {
+  border-radius: 02px;
+  text-decoration: none;
+  padding: 08px; }
+
+.cell-side a:hover,
+.cell-side a.active {
+  background-color: #fb0101; }
+
+.title {
+  color: #fb0101;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: left;
+  margin: 00px 00px 00px 00px; }
+
+.active .title {
+  color: #fb0101; }
+
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+.subtitle,
+.category {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal; }
+
+h1 {
+  color: #fb0101;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold; }
+
+h2 {
+  color: #fb0101;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 32px; }
+
+h2:first-child {
+  margin-top: 00px; }
+
+h3 {
+  color: #fb0101;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px; }
+
+p,
+li,
+tip {
+  color: #fb0101;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+  text-align: justify;
+  text-justify: inter-word; }
+
+.subtitle {
+  color: #fb0101;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  margin: 00px 00px 00px 00px; }
+
+.category {
+  color: #fb0101;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin: 00px 00px 00px 00px; }
+
+blockquote p {
+  color: #fb0101;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: center; }
+
+li {
+  margin-bottom: 00px; }
+
+ul,
+ol {
+  font-size: 14px;
+  list-style-position: inside;
+  padding-left: 16px; }
+
+hr {
+  border: none;
+  border-top: 1px solid #fb0101; }
+
+/*# sourceMappingURL=main.css.map */

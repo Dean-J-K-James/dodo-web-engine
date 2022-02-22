@@ -1,0 +1,37 @@
+/**********************************************************/
+/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
+/**********************************************************/
+
+#page {
+    display              : grid;
+    grid-area            : body;
+    grid-gap             : 16px;
+}
+
+.cell {
+    background: $colour_cell;
+    border          : 01px solid $colour_border;
+    border-radius   : 04px;
+    position: relative;
+    display         : flex;
+    flex-direction  : column;
+    padding         : 16px;
+}
+
+.cell-page, .cell-side {
+    display         : flex;
+    flex-direction  : column;
+    gap         : 16px;
+}
+
+.cell-page {
+    grid-area: page;
+}
+
+.cell-side {
+    grid-area: side;
+}
+
+.cell-page .cell {
+    gap: 16px;
+}

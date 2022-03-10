@@ -1,6 +1,6 @@
-<!---------------------------------------------------------->
-<!-- Dean James - Pangean Flying Cactus - The Coding Dodo -->
-<!---------------------------------------------------------->
+<!--------------------------------------------------->
+<!-- Dean James - Content Management System Engine -->
+<!--------------------------------------------------->
 
 <div id="menu" class="<?= $_SESSION['page']['menu'] ?>"><?php require_once 'pages/menu/' . $_SESSION['page']['menu'] . '.php' ?></div>
 <div id="page" class="<?= $_SESSION['page']['body'] ?>"><?php require_once 'pages/body/' . $_SESSION['page']['body'] . '.php' ?></div>

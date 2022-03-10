@@ -1,6 +1,5 @@
 <?php require_once 'includes/custom-header.php'; ?>
-<?php require_once 'includes/output-buffer.php'; ?>
-<?php require_once 'includes/asset-version.php'; ?>
+<?php require_once 'includes/configuration.php'; ?>
 
 <!doctype html>
 

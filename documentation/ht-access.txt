@@ -1,0 +1,40 @@
+IndexIgnore *
+
+Order deny,allow
+Allow from *
+
+#Allows URLs to not use the .php extension.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+#Redirects any requests starting with www to the non-www version.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.thecodingdodo\.com$ [NC]
+RewriteRule (.*) https://thecodingdodo.com/$1 [R=301,L]
+
+#Sets up project wide environment variables
+RewriteEngine On
+SetEnv DATABASE thecodingdodo
+
+#Redirects the application URLs to the correct folder.
+RewriteEngine On
+RewriteRule ^ajax.php /src/ajax.php
+RewriteRule ^cookies /src/index.php?brand=thecodingdodo&page=cookies
+
+#Redirects the application URLs to the correct folder.
+RewriteEngine On
+RewriteRule ^blog/(.*.png)$ /application/thecodingdodo/$1
+RewriteRule ^blog/(.*)$     /src/index.php?brand=thecodingdodo&page=blog&name=$1
+RewriteRule ^blog           /src/index.php?brand=thecodingdodo&page=feed
+
+#Redirects the application URLs to the correct folder.
+RewriteEngine On
+RewriteRule ^tool/(.*.png)$ /application/tools/$1
+RewriteRule ^tool/(.*)$     /src/index.php?brand=tools&page=tool&name=$1
+RewriteRule ^tool           /src/index.php?brand=tools&page=tool&name=md5
+
+#Sets the default homepage for this brand.
+RewriteEngine On
+DirectoryIndex /src/index.php?brand=thecodingdodo&page=feed

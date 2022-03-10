@@ -1,12 +1,12 @@
-/**********************************************************/
-/** Dean James - Pangean Flying Cactus - The Coding Dodo **/
-/**********************************************************/
+/***************************************************/
+/** Dean James - Content Management System Engine **/
+/***************************************************/
 
 /**
  * 
  */
 $("#cookies-accept").click(function () {
-    $.post('/ajax.php', { 'ajax': 'ajax/cookies-accept.php' }, function () {
+    $.post('/ajax', { 'ajax': 'cookies-accept.php' }, function () {
         location.reload();
     });
 });

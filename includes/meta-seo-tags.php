@@ -1,6 +1,6 @@
-<!---------------------------------------------------------->
-<!-- Dean James - Pangean Flying Cactus - The Coding Dodo -->
-<!---------------------------------------------------------->
+<!--------------------------------------------------->
+<!-- Dean James - Content Management System Engine -->
+<!--------------------------------------------------->
 
 <meta name="title" content="%TITLE%">
 <meta name="image" content="%IMAGE%">

@@ -1,10 +1,13 @@
-<!---------------------------------------------------------->
-<!-- Dean James - Pangean Flying Cactus - The Coding Dodo -->
-<!---------------------------------------------------------->
+<!--------------------------------------------------->
+<!-- Dean James - Content Management System Engine -->
+<!--------------------------------------------------->
 
 <?php
-if (($_SESSION['page'] = Page::selectDB(isset($_GET['page']) ? $_GET['page'] : "home")) == null)
+$brand = isset($_GET['brand']) ? $_GET['brand'] : "admin";
+$page  = isset($_GET['page' ]) ? $_GET['page' ] : "home";
+
+if (($_SESSION['page'] = Page::selectDB($brand, $page)) == null)
 {
-    header('Location: /page/404');
+    header('Location: /404');
     exit;
 }

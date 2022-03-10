@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/thecodo3/public_html/
+    - export DEPLOYPATH=/home2/thecodo3/public_html/src/
     - /bin/cp -R contents $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R includes $DEPLOYPATH

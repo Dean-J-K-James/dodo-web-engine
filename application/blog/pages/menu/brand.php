@@ -1,0 +1,1 @@
+<a href="<?= Assets::CreateAddress("feed") ?>" class="<?= $_SESSION['page']['page'] == 'feed' ? 'active' : ''; ?>">Blog</a>

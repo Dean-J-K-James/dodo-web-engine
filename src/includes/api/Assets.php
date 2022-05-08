@@ -6,7 +6,7 @@
 class Assets
 {
 
-    public static function GetBrandAsset($fileName)
+    public static function LoadAsset($fileName)
     {
         if (file_exists($_SERVER['DOCUMENT_ROOT'] . APPPATH . "/application/" . BRAND . "/" . $fileName))
         {
@@ -16,9 +16,14 @@ class Assets
         return APPPATH . "/src/" . $fileName;
     }
 
+    public static function GetBrandAsset($fileName)
+    {
+        return self::LoadAsset($fileName) . '?version=' . VERSION;
+    }
+
     public static function LoadBrandFile($fileName)
     {
-        return $_SERVER['DOCUMENT_ROOT'] . self::GetBrandAsset($fileName);
+        return $_SERVER['DOCUMENT_ROOT'] . self::LoadAsset($fileName);
     }
 
     public static function CreateAddress($pageLink)

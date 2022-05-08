@@ -2,9 +2,8 @@ $("#cookies-accept").click(function (e)
 {
     $.ajax({
         type: "POST",
-        url: root + '/ajax/cookies-accept',
-        processData: false,
-        contentType: false,
+        url: root + '/ajax',
+        data: {ajax: 'cookies-accept'},
         success: function ()
         {
             location.reload();

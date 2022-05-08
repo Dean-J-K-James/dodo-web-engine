@@ -8,3 +8,8 @@ https://iq.opengenus.org/euclidean-vs-manhattan-vs-chebyshev-distance/#:~:text=t
 
 -move index brand to applications folder.
 -have index as default brand in the page-setup file.
+
+-try to see of the logs table will work without the `` around each column name.
+-cant use the VERSION method because file_get_contents wont load the mark down files.
+-maybe LoadFile can minus the version part of the address, because files wont need it.
+-on the error page, have a link back to the homepage.

@@ -13,7 +13,7 @@ class DefinitionBySlug
     {
         global $dbh;
 
-        $sth = $dbh->prepare("SELECT * FROM blogs WHERE slug = :slug AND active = 1");
+        $sth = $dbh->prepare("SELECT * FROM `blogs` WHERE `slug` = :slug AND `active` = 1");
         $sth->bindParam(':slug', $slug, PDO::PARAM_STR);
         $sth->execute();
         return $sth->fetch(PDO::FETCH_ASSOC);

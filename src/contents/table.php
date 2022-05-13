@@ -1,7 +1,7 @@
 <?php
 $page = $_REQUEST['page-table'];
 $filt = $_REQUEST['filters'];
-$json = json_decode(file_get_contents(Assets::LoadBrandFile('contents/' . $page . '-table.json')), true);
+$json = json_decode(file_get_contents(load_file('contents/' . $page . '-table.json')), true);
 ?>
 
 <table class="table-database">
@@ -11,7 +11,7 @@ $json = json_decode(file_get_contents(Assets::LoadBrandFile('contents/' . $page 
         <?php endforeach; ?>
     </tr>
     <?php foreach ($json['cls']::selectAllDB($filt) as $row): ?>
-        <tr class="table-link" data-href="<?= Assets::CreateAddress($json['act'] . '/' . $row['id']) ?>">
+        <tr class="table-link" data-href="<?= create_link($json['act'] . '/' . $row['id']) ?>">
             <?php foreach ($json['frm'] as $column): ?>
                 <td><?= $row[$column['td']] ?></td>
             <?php endforeach; ?>

@@ -1,7 +1,3 @@
-/********************************************/
-/** Dean James - Content Management System **/
-/********************************************/
-
 import initialise      from '../../js/initialise.js';
 import Grid            from '../../js/grid.js';
 import create_2d_array from '../../js/create_2d_array.js';

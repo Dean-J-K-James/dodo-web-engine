@@ -1,5 +1,6 @@
 <?php
 
+#
 ob_start(function ($buffer)
 {
     $buffer = str_replace('%TITLE%', $_SESSION['page']['name']       , $buffer);

@@ -8,7 +8,7 @@ if ($name != '')
     $_SESSION['page']['name'] = $_SESSION['page']['name'] . ' - ' . ucwords(str_replace('-', ' ', $name));
 }
 
-$json = json_decode(str_replace('%NAME%', $name, file_get_contents(Assets::LoadBrandFile('contents/' . (($form['name'] == 1) ? $name : $page) . '.json'))), true);
+$json = json_decode(str_replace('%NAME%', $name, file_get_contents(load_file('contents/' . (($form['name'] == 1) ? $name : $page) . '.json'))), true);
 ?>
 
 <form id="database-form" method="post" enctype="multipart/form-data">

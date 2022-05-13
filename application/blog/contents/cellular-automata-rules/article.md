@@ -1,4 +1,3 @@
-
 ## Types of Cellular Automata
 
 All cellular automata have a set of rules that are used to create new generations. How these rules are applied depends on the type of CA. There are three main types of cellular automata: elementary, totalistic, and outer-totalistic.

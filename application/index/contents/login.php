@@ -10,10 +10,10 @@ if ($login)
     $_SESSION['login'] = $login;
 
     #Redirect to the home page.
-    header('Location: ' . Assets::CreateAddress(HOMEPGE));
+    header('Location: ' . create_link(HOMEPGE));
     exit;
 }
 
 #Redirect to the login page.
-header('Location: ' . Assets::CreateAddress("login"));
+header('Location: ' . create_link("login"));
 exit;

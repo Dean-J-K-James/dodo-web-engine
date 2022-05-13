@@ -1,1 +1,0 @@
-tinymce.init({selector: '.tinymce', height: 1000, plugins: 'link media table'});

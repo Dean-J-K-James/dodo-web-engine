@@ -13,12 +13,12 @@ $_SESSION['page']['canonical']   = "https://thecodingdodo.com/blog/" . $data['sl
 <?php if ($data['demo']): ?>
     <canvas id="application-container"></canvas>
     <blockquote>
-        <p><strong>Demo</strong> - Click the demo to restart the animation. Click <a href="<?= Assets::GetBrandAsset("contents/" . $data['slug'] . "/main.js") ?>">here</a> to see the code.</p>
+        <p><strong>Demo</strong> - Click the demo to restart the animation. Click <a href="<?= load_asset_v("contents/" . $data['slug'] . "/main.js") ?>">here</a> to see the code.</p>
     </blockquote>
 
     <?php foreach (json_decode($data['js'], true) as $file): ?>
-        <script src="<?= Assets::GetBrandAsset('js/' . $file) ?>" defer></script>
+        <script src="<?= load_asset_v('js/' . $file) ?>" defer></script>
     <?php endforeach ?>
 
-    <script type="module" src="<?= Assets::GetBrandAsset('contents/' . $data['slug'] . '/main.js') ?>"></script>
+    <script type="module" src="<?= load_asset_v('contents/' . $data['slug'] . '/main.js') ?>"></script>
 <?php endif; ?>

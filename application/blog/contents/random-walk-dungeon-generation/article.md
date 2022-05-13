@@ -1,7 +1,3 @@
-<!-------------------------------------------->
-<!-- Dean James - Content Management System -->
-<!-------------------------------------------->
-
 ## What is Random Walk?
 
 Procedural cave and dungeon generation is a fundamental aspect of many games and applications. Whether it be a 2D top-down dungeon crawler, or a 3D voxel first person shooter, procedurally generated caves and dungeons add varied, unique environments for the player to experience.
@@ -29,7 +25,6 @@ We begin by defining a function, `random_walk` , which controls the execution of
 
     random_walk() {
         this.initialise();
-
         for (let i = 0; i < 2000; i++) {
             this.iterate_random_walk();
         }

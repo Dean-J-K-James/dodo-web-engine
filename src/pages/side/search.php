@@ -1,1 +1,1 @@
-<?php FormGenerator::render(json_decode(file_get_contents(Assets::LoadBrandFile('contents/search.json')), true)); ?>
+<?php FormGenerator::render(json_decode(file_get_contents(load_file('contents/search.json')), true)); ?>

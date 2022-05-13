@@ -1,21 +1,69 @@
-What is Entity Component System?
-Entity Component System is a software pattern commonly employed in game development.
+## What is Entity Component System?
 
-It is designed to take full advantage of a computer’s hardware to maximize performance, whilst also providing the programmer with a structured, modular environment.
+Entity Component System (ECS) is a software pattern commonly used in game development. It is designed to take full advantage of a computer’s hardware to maximize performance, whilst also providing the programmer with a structured, modular, and reusable environment.
 
+ECS, as it's name suggests, comprises three parts: entities, components, and systems. Each of these three parts have their own purpose and responsibilities within an ECS framework, and interact with each other in their own ways.
 
-The three parts to ECS
-The pattern comprises three parts: entities, components, and systems.
+![ECS Parts](%CNTNT%/figure1.png)
+> **Figure 1** - ECS Parts
 
-An Example
-To better explain the concepts involved in the ECS pattern, consider a 2D platformer with the following objects:
+## Example
 
-A player controlled by a mouse and keyboard.
-A static tree.
-Two zombies controlled by AI.
-What Would this Look Like in OOP?
+ECS is often used as an alternative to the traditional object oriented approach to software development. Although both ECS and OOP can be used together, let's have a look at an example where we use and compare both methods as alternatives. Consider a 2D platformer with the following features:
+
+* A player controlled by a mouse and keyboard.
+* A static tree.
+* Two zombies controlled by AI.
+
+### What Would this Look Like in OOP?
+
 In object oriented programming, data and functionality are kept tightly encapsulated within classes, promoting inheritance like in the following diagram:
 
+![Our Example Game Using OOP](%CNTNT%/figure2.png)
+> **Figure 1** - Our Example Game Using OOP
+
+We define a class, `GameObject` which contains all the functionality and data that is common between our features. This class could look something like this:
+
+    class GameObject
+    {
+        public Sprite sprite;
+        public float  x;
+        public float  y;
+
+        public void Render()
+        {
+            ...
+        }
+    }
+
+All of our features, the player, a tree, and the zombies, require an x and y position, and a sprite to visualise them; as well as a function used to render the object to the screen. Since our tree object would not require any additional data or functionality, we could instantiate the `GameObject` class to represent the tree object.
+
+The remaining player and zombie features would need some extra functionality. For this, we would define a class for each. The player would be represented by the `Player` class.
+
+    class Player : GameObject
+    {
+        public int health;
+
+        public void OnInput()
+        {
+            ...
+        }
+    }
+
+The player would inherit the position and sprite properties from it's parent class, and then define the additional data and functionality it needs in it's own class. The player in our game would be represented by an instance of the `Player` class.
+
+The two zombies would be similar, each being represented by an instance of the `Zombie` class.
+
+    class Zombie : GameObject
+    {
+        public void OnUpdate()
+        {
+            ...
+        }
+    }
+
+
+is a and has a relationships.
 
 Inheritance diagram for some classes
 Here, a parent GameObject class contains all common data and functionality. Different classes would inherit and override this.

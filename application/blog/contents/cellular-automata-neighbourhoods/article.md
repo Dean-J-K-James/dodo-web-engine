@@ -1,4 +1,3 @@
-
 ## Neighbourhood
 
 The neighbourhood of a cell refers to the set of cells that are in some way relevant to that cell in respect to the rules of a given cellular automaton. When the rules of a cellular automaton are applied to a cell, it's neighbourhood is used when calculating it's new state.

@@ -5,11 +5,11 @@ if ($_GET['page'] == 'home')
     $_GET['page'] = HOMEPGE;
 }
 
-$_SESSION['page']  = Page::selectDB($_GET['page']);
+$_SESSION['page'] = Page::selectDB($_GET['page']);
 $_SESSION['brand'] = Brand::selectDB($_SESSION['page']['brand']);
 
 if ($_SESSION['brand'] == false)
 {
-    header('Location: ' . Assets::CreateAddress("error/page-not-found"));
+    header('Location: ' . create_link("error/page-not-found"));
     exit;
 }

@@ -1,7 +1,3 @@
-<!-------------------------------------------->
-<!-- Dean James - Content Management System -->
-<!-------------------------------------------->
-
 ## What is Noise?
 
 In computer science, noise is a set of procedurally generated numbers, usually generated for, and stored in, a two dimensional grid. A grid made up of individual noise values is known as a noise map. There are several types of noise, each with unique properties and purposes. Some are entirely random, such as static noise, and some are generated according to an algorithm, such as perlin noise.

@@ -13,7 +13,7 @@ class Brand
     {
         global $dbh;
 
-        $sth = $dbh->prepare("SELECT * FROM `brands` WHERE `brand` <> 'index'");
+        $sth = $dbh->prepare("SELECT * FROM brands WHERE brand <> 'index'");
         $sth->execute();
         return $sth->fetchAll();
     }
@@ -25,7 +25,7 @@ class Brand
     {
         global $dbh;
 
-        $sth = $dbh->prepare("SELECT * FROM `brands` WHERE `brand` = :brand");
+        $sth = $dbh->prepare("SELECT * FROM brands WHERE brand = :brand");
         $sth->bindParam(':brand', $brand, PDO::PARAM_STR);
         $sth->execute();
         return $sth->fetch();

@@ -4,6 +4,6 @@
         <div class="card-two-column-details">
             <p class="white"><?= $_SESSION['login']['username'] ?></p>
         </div>
-        <a href="<?= Assets::CreateAddress("ajax/logout") ?>"></a>
+        <a href="<?= create_link('ajax/logout') ?>"></a>
     </div>
 <?php endif; ?>

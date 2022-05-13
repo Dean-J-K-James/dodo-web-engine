@@ -12,7 +12,7 @@
                 </div>
                 <div class="divider"></div>
             </div>
-            <a href="<?= Assets::CreateAddress($brand['homepage']) ?>"></a>
+            <a href="<?= create_link($brand['homepage']) ?>"></a>
         </div>
         <hr>
     <?php endif; ?>

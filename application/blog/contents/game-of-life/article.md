@@ -1,7 +1,3 @@
-<!-------------------------------------------->
-<!-- Dean James - Content Management System -->
-<!-------------------------------------------->
-
 ## What is Conway's Game of Life?
 
 Conway's game of life is a type of outer-totalistic cellular automata using square cells in a two-dimensional grid. Each cell can be in one of two states, defined as either "live" or "dead". It was created by John Conway in 1970, and provides a simulation of birth and death by underpopulation and overpopulation.

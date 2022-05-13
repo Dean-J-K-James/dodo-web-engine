@@ -4,5 +4,5 @@
 session_destroy();
 
 #Redirects to the home page.
-header('Location: ' . Assets::CreateAddress(HOMEPGE));
+header('Location: ' . create_link(HOMEPGE));
 exit;

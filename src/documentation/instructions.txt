@@ -22,3 +22,15 @@ https://iq.opengenus.org/euclidean-vs-manhattan-vs-chebyshev-distance/#:~:text=t
 -keep the error page, but put it under the blog brand.
 
 -remove .htaccess from the git repository.
+-add the cookies page.
+-error and cookies are pages that aren't necessarily part of index, so should be in src. this allows brands to use them as though they were part of that brand.
+-should logout be part of index? maybe make it an actual page again that returns to the homepage after being run.
+-login/ logout maybe should be part of it's own brand? each brand could have a dependency on other brands as well.
+-this could allow them to share files, such as database-form without having those files in src.
+-regardless, the aim should be for src to have the absolute minimum code, and make sure it is all generic.
+-if files like error and cookies are in a generic index brand (that doesn't include the login stuff), then this brand could act as a dependency for blog.
+-since blog will still be the priority brand, it's styling will be used.
+-sort of a return to the modules system we had, but ad brands instead.
+-maybe as brands, in the database, there could be an option to mark them as a virtual brand, meaning it is there purely as a dependency for other brands.
+
+-there is an error on line 9 of page-setup if the page does not exist. check if it does before trying to get it's brand.

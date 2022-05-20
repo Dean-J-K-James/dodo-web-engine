@@ -1,2 +1,0 @@
-<a href="<?= create_link("cookies") ?>" class="<?= $_SESSION['page']['slug'] == 'cookies' ? 'active' : ''; ?>">Cookie Policy</a>
-<a href="<?= create_link("feed")    ?>" class="<?= $_SESSION['page']['slug'] == 'feed'    ? 'active' : ''; ?>">Blog</a>

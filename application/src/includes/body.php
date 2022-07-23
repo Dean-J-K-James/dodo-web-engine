@@ -1,1 +1,0 @@
-<div id="page" class="<?= $_SESSION['page']['body'] ?>"><?php require_once 'pages/body/' . $_SESSION['page']['body'] . '.php' ?></div>

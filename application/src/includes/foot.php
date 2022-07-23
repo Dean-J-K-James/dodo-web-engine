@@ -1,1 +1,0 @@
-<div id="foot"><?php require_once 'pages/foot/brand.php' ?></div>
